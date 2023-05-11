@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.operationsController">
+   <children>
+      <Label layoutX="47.0" layoutY="38.0" text="Operations">
+         <font>
+            <Font name="Calibri Bold" size="29.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="47.0" layoutY="100.0" prefHeight="307.0" prefWidth="699.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="payement">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="paiementTable" layoutX="1.0" layoutY="36.0" onMouseClicked="#paiement" prefHeight="242.0" prefWidth="698.0">
+                          <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="prenomColumn" prefWidth="120.33334350585938" text="prenom" />
+                              <TableColumn fx:id="nomColumn" prefWidth="113.66665649414062" text="nom" />
+                              <TableColumn fx:id="montantColumn" prefWidth="135.00003051757812" text="montant" />
+                              <TableColumn fx:id="dateColumn" prefWidth="149.0" text="date de paiement" />
+                              <TableColumn fx:id="statutColumn" prefWidth="104.33331298828125" text="statut" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="deleteBtn1" layoutX="668.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#deletePayement1" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/image/delete%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="apprenants">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="apprenantTable" layoutX="1.0" layoutY="36.0" onMouseClicked="#apprenant" prefHeight="242.0" prefWidth="698.0">
+                           <columns>
+                              <TableColumn fx:id="idAColumn" prefWidth="51.0" text="id" />
+                              <TableColumn fx:id="nomAColumn" prefWidth="83.6666259765625" text="nom" />
+                              <TableColumn fx:id="prenomAColumn" prefWidth="115.0" text="prenom" />
+                              <TableColumn fx:id="dateAColumn" prefWidth="155.6666259765625" text="date de naissance" />
+                              <TableColumn fx:id="lieuAColumn" prefWidth="173.3333740234375" text="lieu de naissance" />
+                              <TableColumn fx:id="classeAColumn" prefWidth="120.6666259765625" text="classe" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="deleteBtn2" layoutX="667.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#deleteApprenant2" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/image/delete%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="notes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="noteTable" layoutX="1.0" layoutY="36.0" onMouseClicked="#note" prefHeight="242.0" prefWidth="698.0">
+                           <columns>
+                              <TableColumn fx:id="idNColumn" prefWidth="109.0" text="id" />
+                              <TableColumn fx:id="matiereNColumn" prefWidth="277.0" text="matiere" />
+                              <TableColumn fx:id="noteNColumn" prefWidth="198.0" text="note" />
+                              <TableColumn fx:id="id_apprenantcolumn" prefWidth="113.3333740234375" text="id_apprenant" />
+                           </columns>
+                        </TableView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="24.0" layoutX="90.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" width="24.0" />
+                        <Button fx:id="deleteBtn3" layoutX="666.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#deleteNote3" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/image/delete%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField fx:id="txt_search" layoutX="1.0" layoutY="7.0" prefHeight="25.0" prefWidth="81.0" promptText="id note" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="97.0" layoutY="23.0" onMouseClicked="#searchNote">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></FontAwesomeIcon>
+                        <TextField fx:id="notefield" layoutX="141.0" layoutY="7.0" prefHeight="25.0" prefWidth="118.0" promptText="nouvelle note" />
+                        <Button fx:id="modifierNotes" layoutX="269.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#editNote" style="-fx-background-color: #123888;" text="modifier" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="325.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ressources/image/corbeille111.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

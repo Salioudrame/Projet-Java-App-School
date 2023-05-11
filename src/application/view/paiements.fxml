@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.paiementsController">
+   <children>
+      <Label layoutX="40.0" layoutY="30.0" text="Paiement">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="payementTable" layoutX="40.0" layoutY="326.0" onMouseClicked="#rowSelection" prefHeight="200.0" prefWidth="524.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="idPayementColumn" prefWidth="34.333343505859375" text="id" />
+          <TableColumn fx:id="prenomColumn" prefWidth="62.333343505859375" text="prenom" />
+            <TableColumn fx:id="nomColumn" prefWidth="41.666656494140625" text="nom" />
+            <TableColumn fx:id="classeColumn" prefWidth="40.66668701171875" text="classe" />
+            <TableColumn fx:id="montantColumn" prefWidth="64.0" text="montant" />
+            <TableColumn fx:id="datePayementColumn" prefWidth="74.66668701171875" text="date payement" />
+            <TableColumn fx:id="echeanceColumn" prefWidth="72.6666259765625" text="date echeance" />
+            <TableColumn fx:id="montantPayeColumn" prefWidth="69.66668701171875" text="total" />
+            <TableColumn fx:id="statutColumn" prefWidth="69.66668701171875" text="statut" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="586.0" layoutY="46.0" prefHeight="251.0" prefWidth="720.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="94.0" layoutX="-1.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="165.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff8000" />
+                        <Stop color="#fff25c" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="94.0" layoutX="186.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="165.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#123888" />
+                        <Stop color="#966df6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="94.0" layoutX="371.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="165.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#6d1387" />
+                        <Stop color="#ad56ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="94.0" layoutX="556.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="165.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#6e0202" />
+                        <Stop color="#ff7676" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="622.0" layoutY="86.0" text="annee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="byDayLabel" layoutX="79.0" layoutY="24.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="byHebdoLabel" layoutX="261.0" layoutY="23.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="byMonthLabel" layoutX="446.0" layoutY="24.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="byYearLabel" layoutX="624.0" layoutY="23.0">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prenom" layoutX="-1.0" layoutY="148.0" prefHeight="25.0" prefWidth="165.0" promptText="prenom" />
+            <TextField fx:id="nom" layoutX="187.0" layoutY="148.0" prefHeight="25.0" prefWidth="165.0" promptText="nom" />
+            <TextField fx:id="montant" layoutX="556.0" layoutY="148.0" prefHeight="25.0" prefWidth="165.0" promptText="montant" />
+            <Button fx:id="editButton" layoutX="556.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#editPaiement" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: #123888;" text="modifier" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="addButton" layoutX="372.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#addPayement" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: green;" text="ajouter" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="resetButton" layoutX="187.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#resetPaiement" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: brown;" text="reset" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ComboBox fx:id="classes" layoutX="372.0" layoutY="148.0" prefHeight="25.0" prefWidth="165.0" promptText="classes" />
+            <DatePicker fx:id="datePayement" layoutX="-1.0" layoutY="193.0" prefHeight="25.0" prefWidth="165.0" promptText="date Payement" />
+            <Label layoutX="440.0" layoutY="86.0" text="mois">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="228.0" layoutY="86.0" text="hebdomadaire">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="86.0" text="jour">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

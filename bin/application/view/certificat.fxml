@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.certificatControlleur">
+   <children>
+      <TextField fx:id="txt_search" layoutX="199.0" layoutY="174.0" prefHeight="25.0" prefWidth="400.0" promptText="id de l'éudiant" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="25.0" layoutX="602.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="32.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="610.0" layoutY="192.0" onMouseClicked="#searchApprenant" size="1.4em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIcon>
+      <TextField fx:id="txt_prenom" layoutX="199.0" layoutY="263.0" prefHeight="25.0" prefWidth="175.0" promptText="prenom" />
+      <TextField fx:id="nom" layoutX="199.0" layoutY="312.0" prefHeight="25.0" prefWidth="175.0" promptText="nom" />
+      <TextField fx:id="txt_lieu" layoutX="459.0" layoutY="312.0" prefHeight="25.0" prefWidth="175.0" promptText="lieu de naissance" />
+      <Button fx:id="certifierApprenant" layoutX="459.0" layoutY="420.0" mnemonicParsing="false" onAction="#certifierApprenantOnAction" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: black;" text="Certifier " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="nomsClasse" layoutX="199.0" layoutY="365.0" prefHeight="25.0" prefWidth="175.0" promptText="classe" />
+      <TextField fx:id="nomSection" layoutX="199.0" layoutY="420.0" prefHeight="25.0" prefWidth="175.0" promptText="section" />
+      <TextField fx:id="genre" layoutX="459.0" layoutY="263.0" prefHeight="25.0" prefWidth="175.0" promptText="genre" />
+      <TextField fx:id="dateString" layoutX="459.0" layoutY="365.0" prefHeight="25.0" prefWidth="175.0" promptText="annee de naissance" />
+      <Label layoutX="275.0" layoutY="40.0" text="Certficat de scolarité">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

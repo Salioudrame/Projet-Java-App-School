@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.secretaireController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #123888;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="8.0" layoutY="63.0" prefHeight="433.0" prefWidth="184.0">
+               <children>
+                  <HBox prefHeight="49.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/ajouetrEtudiant.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#profil" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Profil des eleves" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="51.0" prefHeight="46.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/salle-de-classe%20.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#classes" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Liste des classes" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="88.0" prefHeight="48.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/eleves.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#listeEleve" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Liste des eleves" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="154.0" prefHeight="42.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/argent.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#paiement" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Paiements" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="59.0" prefHeight="49.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/bulletin-scolaire.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#bulletinsElementaire" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Bulletins elementaire" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="235.0" prefHeight="49.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/bulletin-scolaire.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#bulletinsCollege" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Bulletins college" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="284.0" prefHeight="49.0" prefWidth="184.0">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/image/bulletin-scolaire.png" />
+                           </image>
+                        </ImageView>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#bulletinsFroid" prefHeight="41.0" prefWidth="146.0" style="-fx-background-color: transparent;" text="Bulletins froid/climatisation" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label layoutX="46.0" layoutY="14.0" text="Caissier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <HBox layoutX="9.0" layoutY="562.0" prefHeight="38.0" prefWidth="178.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#deconnexion" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/image/bouton-marche.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Button fx:id="deconnexion" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#deconnexion" prefHeight="28.0" prefWidth="121.0" style="-fx-background-color: transparent;" text="Deconnexion" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="200.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="200.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#profil" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="Profil des eleves" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="236.0" layoutY="125.0" onMouseClicked="#profil" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/ajouetrEtudiant.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="346.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="346.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#bulletinsElementaire" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="Elementaire" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="382.0" layoutY="256.0" onMouseClicked="#bulletinsElementaire" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/bulletin-scolaire.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="490.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="490.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#classes" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="Liste des classes" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="526.0" layoutY="121.0" onMouseClicked="#classes" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/salle-de-classe%20.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="93.0" layoutX="200.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="200.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#listeEleve" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="Liste des eleves" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="240.0" layoutY="249.0" onMouseClicked="#listeEleve" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/eleves.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" layoutX="346.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="346.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#paiement" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="Paiements" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="376.0" layoutY="118.0" onMouseClicked="#paiement" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/argent.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="93.0" layoutX="491.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="491.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#bulletinsCollege" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="college" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="528.0" layoutY="256.0" onMouseClicked="#bulletinsCollege" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/bulletin-scolaire.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="93.0" layoutX="200.0" layoutY="382.0" stroke="BLACK" strokeType="INSIDE" width="115.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="#1d00ff" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button layoutX="200.0" layoutY="467.0" mnemonicParsing="false" onMouseClicked="#bulletinsFroid" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black;" text="froid et clim" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="236.0" layoutY="399.0" onMouseClicked="#bulletinsFroid" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ressources/image/bulletin-scolaire.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.rubriquesController">
+   <children>
+      <Label layoutX="26.0" layoutY="26.0" text="Rubriques">
+         <font>
+            <Font name="Verdana Bold" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="rubriqueTable" layoutX="26.0" layoutY="68.0" onMouseClicked="#rowSelection" prefHeight="243.0" prefWidth="547.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0">
+         <columns>
+            <TableColumn fx:id="idRubriquesColumn" prefWidth="62.0" text="Id" />
+            <TableColumn fx:id="classeColumn" minWidth="0.0" prefWidth="69.0" text="Classe" />
+            <TableColumn fx:id="droitColumn" prefWidth="110.0" text="Droit d'inscription" />
+            <TableColumn fx:id="scolariteColumn" prefWidth="58.0" text="Scolarite" />
+            <TableColumn fx:id="albumsColumn" prefWidth="52.33331298828125" text="Albums" />
+            <TableColumn fx:id="tenuesColumn" prefWidth="54.33331298828125" text="Tenues" />
+            <TableColumn fx:id="fraisColumn" prefWidth="91.0" text="Frais generaux" />
+            <TableColumn fx:id="cotisationColumn" prefWidth="88.0" text="Cotisation APE" />
+            <TableColumn fx:id="totalColumn" prefWidth="88.0" text="Total a payer" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="droitDinscription" layoutX="405.0" layoutY="329.0" prefHeight="38.0" prefWidth="170.0" promptText="Droit d'inscription" />
+      <TextField fx:id="scolarite" layoutX="604.0" layoutY="329.0" prefHeight="38.0" prefWidth="170.0" promptText="scolarite" />
+      <TextField fx:id="albums" layoutX="405.0" layoutY="395.0" prefHeight="38.0" prefWidth="170.0" promptText="albums" />
+      <TextField fx:id="tenues" layoutX="604.0" layoutY="395.0" prefHeight="38.0" prefWidth="170.0" promptText="tenues" />
+      <TextField fx:id="fraisGeneraux" layoutX="405.0" layoutY="458.0" prefHeight="38.0" prefWidth="170.0" promptText="frais generaux" />
+      <TextField fx:id="cotisationAPE" layoutX="604.0" layoutY="458.0" prefHeight="38.0" prefWidth="170.0" promptText="cotisation APE" />
+      <Button fx:id="editButton" layoutX="405.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#editRubrique" prefHeight="38.0" prefWidth="369.0" style="-fx-background-color: #123888;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="272.0" fitWidth="291.0" layoutX="31.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ressources/image/inscription.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

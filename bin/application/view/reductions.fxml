@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.reductionsController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" height="248.0" layoutX="443.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" width="254.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startY="0.7587301345098586">
+               <stops>
+                  <Stop color="#123888" />
+                  <Stop color="#101010" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="248.0" fitWidth="270.0" layoutX="47.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ressources/image/reduction1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="80.0" layoutY="53.0" text="Reduction">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="476.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#reduction" prefHeight="25.0" prefWidth="190.0" style="-fx-background-color: white;" text="Faire une reduction">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="classes" layoutX="476.0" layoutY="300.0" prefHeight="25.0" prefWidth="190.0" promptText="classes" style="-fx-background-color: white;" />
+      <Label accessibleRole="IMAGE_VIEW" layoutX="489.0" layoutY="233.0" prefHeight="45.0" prefWidth="147.0" text="Reduction" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pourcent" layoutX="476.0" layoutY="348.0" prefHeight="25.0" prefWidth="190.0" promptText="pourcent" />
+   </children>
+</AnchorPane>
